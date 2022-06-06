@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./features/footer/Footer";
+import Header from "./features/headers/Header";
+import TodosList from "./features/todos/TodosList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav className="bg-teal-700 py-4 flex items-center justify-center">
+        <div className="text-white ">Todos App</div>
+      </nav>
+      <main>
+        <div className="bg-white w-3/4 mx-auto my-12">
+          <div className="w-full">
+            <Header />
+            <TodosList />
+            <Footer />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
